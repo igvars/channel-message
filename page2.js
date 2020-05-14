@@ -6,7 +6,7 @@ function App() {
 
   function onMessage(e) {
     console.log(e.data);
-    setListItems([...listItems, e.data]);
+    setListItems( items => ([…items, e.data]))
   }
   function initPort(e) {
     port2.current = e.ports[0];
